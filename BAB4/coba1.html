@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Simpel & Elegan</title>
+    <!-- Google Font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #fafafa;
+            --card-bg: #ffffff;
+            --text-main: #171717;
+            --text-muted: #737373;
+            --accent: #2563eb;
+            --accent-hover: #1d4ed8;
+            --border: #e5e5e5;
+            --radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            line-height: 1.6;
+            padding: 0 1.5rem;
+        }
+
+        /* Container terpusat */
+        .container {
+            width: 100%;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            padding: 3rem 0 2rem;
+            text-align: center;
+        }
+
+        .site-title {
+            font-size: 1.75rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: var(--text-main);
+        }
+
+        .site-subtitle {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 1rem 0 3rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2.5rem 2rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+            text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .card h2 {
+            font-size: 1.35rem;
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.01em;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.975rem;
+            margin-bottom: 1.75rem;
+        }
+
+        /* Tombol Interaktif */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--accent);
+            color: #ffffff;
+            font-weight: 500;
+            font-size: 0.925rem;
+            padding: 0.75rem 1.75rem;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Pesan Notifikasi Interaktif */
+        .message-box {
+            margin-top: 1.25rem;
+            padding: 0.75rem 1rem;
+            background-color: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            color: #166534;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            display: none;
+            animation: fadeIn 0.3s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Footer */
+        footer {
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+            width: 100%;
+        }
+
+        /* Responsive spacing */
+        @media (max-width: 480px) {
+            header {
+                padding: 2rem 0 1.5rem;
+            }
+            .card {
+                padding: 1.75rem 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1 class="site-title">Minimalis.</h1>
+            <p class="site-subtitle">Desain bersih, simpel, dan fungsional</p>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <div class="card">
+                <h2>Selamat Datang</h2>
+                <p>Halaman ini dirancang menggunakan HTML dan CSS yang sangat ringkas tanpa dekorasi berlebihan, mengutamakan kenyamanan membaca dan kemudahan navigasi.</p>
+                
+                <button class="btn" id="actionBtn" onclick="handleClick()">Klik Saya</button>
