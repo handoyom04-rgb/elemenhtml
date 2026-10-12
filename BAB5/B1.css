@@ -1,0 +1,20 @@
+/* Properti Box MOdel */
+.kontak {
+    /* KOnten */
+    width: 300px;
+    height: 150px;
+
+    /* padding: shorthand (atas kanan bawah kiri) */
+    padding: 20px 30px 20px 30px;
+    /* atau: padding: 20px 30px; (atas-bawah |kiri-kanan) */
+    /* atau: padding: 20px; (semua sisi sama) */
+
+    /* Margin */
+    margin: 20px auto;  /* atas-bawah: 20px, kiri-kanan: auto (tengah) */
+} 
+
+/* box-sizing: border-box - SANGAT DIREKOMENDASIKAN! */
+/* Membuat width & height sudah termasuk padding & border */
+* {
+    Box-sizing: border-box;
+}
